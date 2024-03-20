@@ -9,6 +9,7 @@
             height: 100%;
             margin: 0;
             display: flex;
+            flex-direction: column; /* Aligns the content vertically */
             align-items: center;
             justify-content: center;
             background-color: black;
@@ -20,12 +21,28 @@
             text-align: center;
             font-size: 24px; /* Adjust the font size as needed */
             font-weight: bold; /* Makes the text bold */
+            margin-bottom: 20px; /* Adds space between the text and the image */
+        }
+
+        .centered-image {
+            text-align: center; /* Ensures the image is centered */
+            margin-bottom: 20px; /* Adds some space below the image if needed */
+        }
+
+        .centered-image img {
+            width: auto; /* Keeps the image's aspect ratio */
+            height: auto; /* Adjusts the height to be responsive */
+            max-width: 100%; /* Ensures the image is not wider than the screen */
+            max-height: 80vh; /* Adjusts maximum height to fit the viewport */
         }
     </style>
 </head>
 <body>
     <div class="centered-text">
         Embrace your checkered past
+    </div>
+    <div class="centered-image">
+        <img src="images/SKA_CULT_SPLATTER.png" alt="SKA CULT Splatter Art">
     </div>
 </body>
 </html>
