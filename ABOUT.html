@@ -6,43 +6,78 @@
     <title>About SKA CULT</title>
     <style>
         body, html {
-            height: 100%;
             margin: 0;
-            display: flex;
-            flex-direction: column; /* Aligns the content vertically */
-            align-items: center;
-            justify-content: center;
+            padding: 0;
             background-color: black;
             color: white;
             font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin-right: 10px; /* Space between links */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .hidden-link {
+            display: none; /* Hide these links for now */
+        }
+
+        .centered-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 90vh; /* Adjust based on content size */
         }
 
         .centered-text {
             text-align: center;
             font-size: 24px; /* Adjust the font size as needed */
             font-weight: bold; /* Makes the text bold */
-            margin-bottom: 20px; /* Adds space between the text and the image */
+            margin-bottom: 20px; /* Adds space between text and image */
         }
 
         .centered-image {
-            text-align: center; /* Ensures the image is centered */
-            margin-bottom: 20px; /* Adds some space below the image if needed */
+            text-align: center; /* Center the image */
+            display: flex;
+            justify-content: center;
         }
 
         .centered-image img {
-            width: auto; /* Keeps the image's aspect ratio */
-            height: auto; /* Adjusts the height to be responsive */
-            max-width: 100%; /* Ensures the image is not wider than the screen */
-            max-height: 80vh; /* Adjusts maximum height to fit the viewport */
+            max-width: 100%; /* Ensure image is not larger than its container */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
 <body>
-    <div class="centered-text">
-        Embrace your checkered past
+    <div class="navbar">
+        <a href="SKA_COC.html">Code of Conduct</a>
+        <a href="#" class="hidden-link">Link 2</a>
+        <a href="#" class="hidden-link">Link 3</a>
+        <a href="#" class="hidden-link">Link 4</a>
     </div>
-    <div class="centered-image">
-        <img src="images/SKA_CULT_SPLATTER.png" alt="SKA CULT Splatter Art">
+    <div class="centered-content">
+        <div class="centered-text">
+            Embrace your checkered past
+        </div>
+        <div class="centered-image">
+            <img src="images/SKA_CULT_SPLATTER.png" alt="SKA CULT Splatter">
+        </div>
     </div>
 </body>
 </html>
