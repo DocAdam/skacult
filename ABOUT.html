@@ -33,10 +33,6 @@
             color: black;
         }
 
-        .hidden-link {
-            display: none; /* Hide these links for now */
-        }
-
         .centered-content {
             display: flex;
             flex-direction: column;
@@ -60,7 +56,9 @@
 
         .centered-image img {
             max-width: 100%; /* Ensure image is not larger than its container */
+            max-height: 600px; /* Limit the maximum height of the image */
             height: auto; /* Maintain aspect ratio */
+            width: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
