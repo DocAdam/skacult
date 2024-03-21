@@ -8,14 +8,17 @@
 
 /* Global Styles */
 body, html {
-    height: 100%;
     margin: 0;
+    padding: 0;
     background-color: black;
     color: var(--primary-color); /* Ensures readable text */
     font-family: var(--default-font);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-size-adjust: 100%; /* Prevents mobile browsers from changing text sizes */
+}
+
+/* Ensure the content is displayed correctly in all types of devices */
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 /* Navbar Styles */
@@ -29,6 +32,7 @@ body, html {
     position: fixed; /* Makes the navbar stay at the top of the page */
     top: 0;
     z-index: 1000; /* Ensures navbar stays above other content */
+    padding: 0 10px; /* Adds padding on the sides */
 }
 
 .navbar a {
@@ -38,16 +42,38 @@ body, html {
     text-align: center;
 }
 
+/* Adjustments for smaller screens */
+@media (max-width: 767px) {
+    .navbar a {
+        padding: 14px 10px; /* Smaller padding for smaller screens */
+    }
+
+    .logo-container img {
+        width: 200px; /* Smaller logos for smaller screens */
+    }
+}
+
 /* Logo Container and Logo Styles */
 .logo-container {
+    margin-top: var(--navbar-height); /* Ensure it's not covered by the navbar */
     text-align: center;
 }
 
 .logo-container img {
-    width: 300px; /* Adjust based on your logo's size */
+    max-width: 100%; /* Ensures the image is not wider than its container */
+    height: auto; /* Maintain aspect ratio */
     transition: transform 0.2s; /* Smooth transition for hover effect */
 }
 
 .logo-container img:hover {
     transform: scale(1.1); /* Slightly enlarges the logo on hover */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    body, html {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        justify-content: flex-start; /* Align content to the top */
+        align-items: stretch; /* Stretch items to fit the screen width */
+    }
 }
