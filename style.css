@@ -101,3 +101,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+/* style.css */
+
+/* Other styles */
+
+/* CSS to change the color of linked text */
+a {
+    color: white; /* Change the color to your desired color */
+    text-decoration: none; /* Optional: Remove underline from links */
+}
