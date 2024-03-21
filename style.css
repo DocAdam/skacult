@@ -69,6 +69,15 @@ body, html {
     transform: scale(1.1); /* Slightly enlarges the logo on hover */
 }
 
+/* Centered Image Styles */
+.centered-image img {
+    max-width: 100%; /* Ensure the image is not wider than its container */
+    max-height: 600px; /* Limit the maximum height of the image */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     body, html {
