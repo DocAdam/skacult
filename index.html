@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKA CULT</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS file is linked correctly -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS to style the hyperlinked text */
+        a {
+            color: white; /* Initial color of the hyperlink text */
+            text-decoration: none; /* Optional: Remove underline from links */
+        }
+
+        /* Change color of hyperlink text after it has been clicked */
+        a:visited {
+            color: lightgray; /* Color of the hyperlink text after it has been clicked */
+        }
+    </style>
 </head>
 <body>
-    <script src="navbar.js"></script> <!-- This line will insert your navigation bar -->
-    <div class="content-container"> <!-- Wrap content with the content-container for consistent styling -->
+    <script src="navbar.js"></script>
+    <div class="content-container">
         <div class="logo-container">
-             <a href="RUDEBOY_RESOLUTIONS.html">
-            <img src="images/SKA_CULT_SKULL.png" alt="SKA CULT">
-             </a>
-              <a href="RUDEBOY_RESOLUTIONS.html">
+            <!-- Image linked to RUDEBOY_RESOLUTIONS.html -->
+            <a href="RUDEBOY_RESOLUTIONS.html">
+                <img src="images/SKA_CULT_SKULL.png" alt="SKA CULT">
+            </a>
+            <!-- Text linked to RUDEBOY_RESOLUTIONS.html -->
+            <a href="RUDEBOY_RESOLUTIONS.html">
                 <p>How can I experience Skalvation?</p>
             </a>
         </div>
