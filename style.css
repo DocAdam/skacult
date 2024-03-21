@@ -86,3 +86,18 @@ body, html {
         align-items: stretch; /* Stretch items to fit the screen width */
     }
 }
+
+/* Content Container Styles */
+.content-container {
+    max-width: 1200px; /* Set the maximum content width. Adjust as necessary */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some space inside the container */
+}
+
+/* Ensure that the navbar doesn't overlap the content */
+body {
+    padding-top: var(--navbar-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
