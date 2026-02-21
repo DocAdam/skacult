@@ -1,8 +1,8 @@
-# SKACULT.com — SKA (Sacred Knowledge Annex)
+# skaCULT.com — SKA (Sacred Knowledge Annex)
 
 **Doctrine-free. Idea-rich.**
 
-SKACULT is a lightweight hub for projects + curated links. The name is a joke; the content is real.
+skaCULT is a lightweight hub for projects + curated links. The name is a joke; the content is real.
 
 ## How this site is organized
 

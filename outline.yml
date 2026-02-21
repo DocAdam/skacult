@@ -1,0 +1,15 @@
+- section: "Core"
+  items:
+    - label: "Annex"
+      url: "/"
+    - label: "Projects"
+      url: "/projects"
+    - label: "Contact"
+      url: "/contact"
+
+- section: "Folders"
+  items:
+    - label: "Notes (soon)"
+      url: "/notes"
+    - label: "Tools (soon)"
+      url: "/tools"

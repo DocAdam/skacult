@@ -12,13 +12,42 @@
   <body>
     {% include nav.html %}
 
-    <main class="container">
-      {{ content }}
-    </main>
+    <div class="container layout">
+  <aside class="sidebar" aria-label="Sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">Outline</div>
+
+      {% for group in site.data.outline %}
+        <div class="sidebar-section">{{ group.section }}</div>
+        <nav class="sidebar-nav" aria-label="{{ group.section }}">
+          {% for it in group.items %}
+            <a class="sidebar-link"
+               href="{{ it.url }}"
+               {% if page.url == it.url or page.permalink == it.url %}aria-current="page"{% endif %}>
+              {{ it.label }}
+            </a>
+          {% endfor %}
+        </nav>
+      {% endfor %}
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">On this page</div>
+      <nav id="page-toc" class="toc" aria-label="Table of contents">
+        <div class="muted">Loading…</div>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="content" id="main-content">
+    {{ content }}
+  </main>
+</div>
 
     {% include about-drawer.html %}
     {% include footer.html %}
 
     <script src="/assets/drawer.js"></script>
+    <script src="/assets/toc.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Annex · SKACULT</title>
+    <title>Annex · skaCULT</title>
     <meta name="description" content="SKA — Sacred Knowledge Annex. Doctrine-free. Idea-rich." />
     <link rel="stylesheet" href="/style.css" />
   </head>
@@ -13,7 +13,7 @@
     <!-- _includes/nav.html -->
 <nav class="navbar">
   <div class="nav-left">
-    <a class="brand" href="/" aria-label="SKACULT home">SKACULT</a>
+    <a class="brand" href="/" aria-label="skaCULT home">skaCULT</a>
   </div>
 
   <div class="nav-right">
@@ -24,8 +24,24 @@
   </div>
 </nav>
 
-    <main class="container">
-      <section class="hero">
+    <div class="container layout">
+  <aside class="sidebar" aria-label="Sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">Outline</div>
+
+      
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">On this page</div>
+      <nav id="page-toc" class="toc" aria-label="Table of contents">
+        <div class="muted">Loading…</div>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="content" id="main-content">
+    <section class="hero">
   <h1>SKA — Sacred Knowledge Annex</h1>
   <p class="lede">Doctrine-free. Idea-rich.</p>
 
@@ -42,7 +58,7 @@
     
     
       <article class="card">
-        <h3 class="card-title">SKACULT / SKA (this site)</h3>
+        <h3 class="card-title">skaCULT / SKA (this site)</h3>
         <p class="card-desc">A maintainable hub for projects + links. Mock-church wrapper, real content.</p>
 
         <div class="card-meta">
@@ -94,7 +110,8 @@
     </ul>
   
 </section>
-    </main>
+  </main>
+</div>
 
     <!-- _includes/about-drawer.html -->
 <div class="drawer-overlay" data-drawer-overlay hidden></div>
@@ -109,7 +126,7 @@
     <p class="lede"><strong>Doctrine-free. Idea-rich.</strong></p>
 
     <p>
-      SKACULT is a joke name for a serious habit: publishing things I make, and linking to things I
+      skaCULT is a joke name for a serious habit: publishing things I make, and linking to things I
       think are worth your time.
     </p>
 
@@ -132,7 +149,7 @@
     <!-- _includes/footer.html -->
 <footer class="footer container">
   <div class="footer-inner">
-    <span>© 2026 SKACULT</span>
+    <span>© 2026 skaCULT</span>
     <span class="footer-links">
       <a href="https://github.com/DocAdam" rel="me">GitHub</a>
     </span>
@@ -140,5 +157,6 @@
 </footer>
 
     <script src="/assets/drawer.js"></script>
+    <script src="/assets/toc.js"></script>
   </body>
 </html>
