@@ -603,3 +603,37 @@ h3{
     max-width: 100%;
   }
 }
+/* -----------------------------
+   Mobile TOC: collapsed + toggle
+------------------------------ */
+.toc-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.toc-toggle{
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.toc-toggle:hover{
+  background: color-mix(in srgb, var(--surface) 75%, var(--accent-soft));
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
+/* Collapse behavior */
+.toc.is-collapsed{
+  display: none;
+}
+
+/* Only show the toggle on small screens */
+@media (min-width: 901px){
+  .toc-toggle{ display: none; }
+}

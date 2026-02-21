@@ -31,12 +31,18 @@
       {% endfor %}
     </div>
 
-    <div class="sidebar-block">
-      <div class="sidebar-title">On this page</div>
-      <nav id="page-toc" class="toc" aria-label="Table of contents">
-        <div class="muted">Loading…</div>
-      </nav>
-    </div>
+    <div class="sidebar-block toc-block">
+  <div class="toc-header">
+    <div class="sidebar-title">On this page</div>
+    <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="page-toc" data-toc-toggle>
+      Show
+    </button>
+  </div>
+
+  <nav id="page-toc" class="toc" aria-label="Table of contents">
+    <div class="muted">Loading…</div>
+  </nav>
+</div>
   </aside>
 
   <main class="content" id="main-content">

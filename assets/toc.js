@@ -64,4 +64,33 @@
   }, { rootMargin: "-25% 0px -70% 0px", threshold: 0.01 });
 
   headings.forEach(h => obs.observe(h));
+  // Mobile: collapse TOC by default with a toggle
+  const toggle = document.querySelector("[data-toc-toggle]");
+  const isMobile = () => window.matchMedia("(max-width: 900px)").matches;
+
+  const setCollapsed = (collapsed) => {
+    toc.classList.toggle("is-collapsed", collapsed);
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", String(!collapsed));
+      toggle.textContent = collapsed ? "Show" : "Hide";
+    }
+  };
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const collapsed = toc.classList.contains("is-collapsed");
+      setCollapsed(!collapsed);
+    });
+
+    // Default collapsed on mobile
+    setCollapsed(isMobile());
+
+    // If you resize the window, keep behavior sane
+    window.addEventListener("resize", () => {
+      setCollapsed(isMobile());
+    });
+  } else {
+    // No toggle found; still collapse on mobile
+    if (isMobile()) toc.classList.add("is-collapsed");
+  }
 })();
