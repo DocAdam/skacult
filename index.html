@@ -1,36 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SKA CULT</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* CSS to style the hyperlinked text */
-        a {
-            color: white; /* Initial color of the hyperlink text */
-            text-decoration: none; /* Optional: Remove underline from links */
-        }
+---
+layout: default
+title: Annex
+nav: annex
+description: "SKA — Sacred Knowledge Annex. Doctrine-free. Idea-rich."
+---
 
-        /* Change color of hyperlink text after it has been clicked */
-        a:visited {
-            color: lightgray; /* Color of the hyperlink text after it has been clicked */
-        }
-    </style>
-</head>
-<body>
-    <script src="navbar.js"></script>
-    <div class="content-container">
-        <div class="logo-container">
-            <!-- Image linked to RUDEBOY_RESOLUTIONS.html -->
-            <a href="RUDEBOY_RESOLUTIONS.html">
-                <img src="images/SKA_CULT_SKULL.png" alt="SKA CULT">
-            </a>
-            <!-- Text linked to RUDEBOY_RESOLUTIONS.html -->
-            <a href="RUDEBOY_RESOLUTIONS.html">
-                <p>How can I experience Skalvation?</p>
-            </a>
+<section class="hero">
+  <h1>SKA — Sacred Knowledge Annex</h1>
+  <p class="lede">Doctrine-free. Idea-rich.</p>
+
+  <div class="hero-actions">
+    <a class="button" href="/projects">Browse projects</a>
+    <button class="button button-outline" type="button" data-drawer-open="about">About</button>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Featured</h2>
+
+  <div class="card-grid">
+    {% assign featured = site.data.projects | where: "featured", true %}
+    {% for p in featured %}
+      <article class="card">
+        <h3 class="card-title">{{ p.title }}</h3>
+        <p class="card-desc">{{ p.description }}</p>
+
+        <div class="card-meta">
+          {% if p.status %}<span class="badge">{{ p.status }}</span>{% endif %}
+          {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
         </div>
-    </div>
-</body>
-</html>
+
+        <div class="card-links">
+          {% if p.url %}<a href="{{ p.url }}">Open</a>{% endif %}
+          {% if p.repo %}<a href="{{ p.repo }}">Repo</a>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <h2>Cool stuff</h2>
+
+  {% for group in site.data.cool_stuff %}
+    <h3 class="h3-tight">{{ group.group }}</h3>
+    <ul class="link-list">
+      {% for item in group.items %}
+        <li>
+          <a href="{{ item.url }}">{{ item.name }}</a>
+          {% if item.note %}<span class="muted"> — {{ item.note }}</span>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</section>

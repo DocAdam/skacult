@@ -1,0 +1,14 @@
+- title: "SKACULT / SKA (this site)"
+  description: "A maintainable hub for projects + links. Mock-church wrapper, real content."
+  status: "Active"
+  featured: true
+  tags: ["site", "jekyll"]
+  url: "https://skacult.com"
+  repo: "https://github.com/DocAdam/skacult"
+
+- title: "Project placeholder"
+  description: "Replace this with your real project."
+  status: "Parked"
+  featured: false
+  tags: ["docs", "code"]
+  repo: "https://github.com/DocAdam"

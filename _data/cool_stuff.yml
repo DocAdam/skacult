@@ -1,0 +1,17 @@
+- group: "Tools"
+  items:
+    - name: "VS Code"
+      url: "https://code.visualstudio.com/"
+      note: "Editor"
+
+- group: "Ska fuel"
+  items:
+    - name: "The Specials — Ghost Town"
+      url: "https://en.wikipedia.org/wiki/Ghost_Town_(The_Specials_song)"
+      note: "Classic"
+
+- group: "Internet oddities"
+  items:
+    - name: "Wiby"
+      url: "https://wiby.me/"
+      note: "Search engine for the old web"

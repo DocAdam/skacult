@@ -1,0 +1,13 @@
+<!-- _includes/nav.html -->
+<nav class="navbar">
+  <div class="nav-left">
+    <a class="brand" href="/" aria-label="SKACULT home">SKACULT</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="/" {% if page.nav == "annex" %}aria-current="page"{% endif %}>Annex</a>
+    <a href="/projects" {% if page.nav == "projects" %}aria-current="page"{% endif %}>Projects</a>
+    <a href="/contact" {% if page.nav == "contact" %}aria-current="page"{% endif %}>Contact</a>
+    <button class="nav-button" type="button" data-drawer-open="about">About</button>
+  </div>
+</nav>

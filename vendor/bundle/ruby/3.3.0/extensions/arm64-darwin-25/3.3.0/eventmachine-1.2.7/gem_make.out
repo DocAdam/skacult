@@ -1,0 +1,19 @@
+current directory: /Users/adampugh/skacult/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/opt/homebrew/opt/ruby@3.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/adampugh/skacult/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260221-25580-h01ghv sitelibdir\=./.gem.20260221-25580-h01ghv clean
+
+current directory: /Users/adampugh/skacult/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260221-25580-h01ghv sitelibdir\=./.gem.20260221-25580-h01ghv
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/adampugh/skacult/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260221-25580-h01ghv sitelibdir\=./.gem.20260221-25580-h01ghv install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20260221-25580-h01ghv
+
+current directory: /Users/adampugh/skacult/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260221-25580-h01ghv sitelibdir\=./.gem.20260221-25580-h01ghv clean

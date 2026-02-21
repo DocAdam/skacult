@@ -1,0 +1,28 @@
+---
+layout: default
+title: Projects
+nav: projects
+description: "Projects and experiments indexed in the Sacred Knowledge Annex."
+---
+
+<h1>Projects</h1>
+
+<div class="card-grid">
+  {% for p in site.data.projects %}
+    <article class="card">
+      <h2 class="card-title">{{ p.title }}</h2>
+      <p class="card-desc">{{ p.description }}</p>
+
+      <div class="card-meta">
+        {% if p.status %}<span class="badge">{{ p.status }}</span>{% endif %}
+        {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+
+      <div class="card-links">
+        {% if p.url %}<a href="{{ p.url }}">Open</a>{% endif %}
+        {% if p.repo %}<a href="{{ p.repo }}">Repo</a>{% endif %}
+        {% if p.writeup %}<a href="{{ p.writeup }}">Write-up</a>{% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>

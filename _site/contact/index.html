@@ -1,0 +1,83 @@
+<!-- _layouts/default.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact · SKACULT</title>
+    <meta name="description" content="Contact SKACULT / DocAdam." />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <!-- _includes/nav.html -->
+<nav class="navbar">
+  <div class="nav-left">
+    <a class="brand" href="/" aria-label="SKACULT home">SKACULT</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="/" >Annex</a>
+    <a href="/projects" >Projects</a>
+    <a href="/contact" aria-current="page">Contact</a>
+    <button class="nav-button" type="button" data-drawer-open="about">About</button>
+  </div>
+</nav>
+
+    <main class="container">
+      <h1>Contact</h1>
+
+<ul class="link-list">
+  <li><a href="https://github.com/DocAdam">GitHub</a></li>
+  <!-- Add email/socials/etc -->
+</ul>
+
+<p class="muted">If you’re contacting me about a project, include the link and what you’re trying to do.</p>
+    </main>
+
+    <!-- _includes/about-drawer.html -->
+<div class="drawer-overlay" data-drawer-overlay hidden></div>
+
+<aside class="drawer" id="about-drawer" aria-hidden="true" aria-labelledby="about-title">
+  <div class="drawer-header">
+    <h2 id="about-title">SKA — Sacred Knowledge Annex</h2>
+    <button type="button" class="drawer-close" data-drawer-close="about" aria-label="Close About">✕</button>
+  </div>
+
+  <div class="drawer-body">
+    <p class="lede"><strong>Doctrine-free. Idea-rich.</strong></p>
+
+    <p>
+      SKACULT is a joke name for a serious habit: publishing things I make, and linking to things I
+      think are worth your time.
+    </p>
+
+    <h3>Cult-ish aims</h3>
+    <ul>
+      <li>Build first, brand second.</li>
+      <li>Prefer artifacts over opinions.</li>
+      <li>Keep it small enough to finish.</li>
+      <li>Share the weird useful parts.</li>
+      <li>No sermons — only receipts (links).</li>
+    </ul>
+
+    <h3>Find me</h3>
+    <ul class="link-list">
+      <li><a href="https://github.com/DocAdam" rel="me">GitHub</a></li>
+      <!-- Add Etsy / other links later -->
+    </ul>
+  </div>
+</aside>
+    <!-- _includes/footer.html -->
+<footer class="footer container">
+  <div class="footer-inner">
+    <span>© 2026 SKACULT</span>
+    <span class="footer-links">
+      <a href="https://github.com/DocAdam" rel="me">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+    <script src="/assets/drawer.js"></script>
+  </body>
+</html>
