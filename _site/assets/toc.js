@@ -5,7 +5,7 @@
   if (!toc || !main) return;
 
   // Collect headings you want in TOC (tweak as desired)
-  const headings = Array.from(main.querySelectorAll("h2, h3"))
+  const headings = Array.from(main.querySelectorAll("h2, h3, h4"))
     .filter(h => h.textContent && h.textContent.trim().length > 0);
 
   if (headings.length === 0) {
