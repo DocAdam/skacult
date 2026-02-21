@@ -582,3 +582,24 @@ h3{
     top: auto;
   }
 }
+.media{
+  margin: var(--s4) 0 0;
+}
+
+.media img{
+  width: 100%;
+  max-width: 760px;     /* keeps it from being enormous on desktop */
+  height: auto;         /* preserves aspect ratio */
+  display: block;
+  border-radius: var(--r);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--surface2);
+}
+
+/* On small screens, let it breathe edge-to-edge a bit more */
+@media (max-width: 640px){
+  .media img{
+    max-width: 100%;
+  }
+}
