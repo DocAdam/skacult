@@ -1,6 +1,6 @@
 // assets/toc.js
 (() => {
-  const toc = document.getElementById("page-toc");
+  const toc = document.querySelector(".page-toc");
   const main = document.getElementById("main-content");
   if (!toc || !main) return;
 
@@ -65,7 +65,7 @@
 
   headings.forEach(h => obs.observe(h));
   // Mobile: collapse TOC by default with a toggle
-  const toggle = document.querySelector("[data-toc-toggle]");
+  const toggle = toc ? toc.closest(".toc-block")?.querySelector("[data-toc-toggle]") : null;
   const isMobile = () => window.matchMedia("(max-width: 900px)").matches;
 
   const setCollapsed = (collapsed) => {

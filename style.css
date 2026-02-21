@@ -637,3 +637,70 @@ h3{
 @media (min-width: 901px){
   .toc-toggle{ display: none; }
 }
+/* -----------------------------
+   Mobile: hide sidebar + open it via a left drawer
+------------------------------ */
+.mobile-sidebar-bar{
+  display: none;
+}
+
+.mobile-sidebar-button{
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.mobile-sidebar-button:hover{
+  background: color-mix(in srgb, var(--surface) 75%, var(--accent-soft));
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
+/* Sidebar drawer overlay */
+.sidebar-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1500;
+}
+
+/* Drawer variant: slides from left */
+.drawer-left{
+  left: 0;
+  right: auto;
+  transform: translateX(-100%);
+}
+.drawer-left.open{
+  transform: translateX(0);
+}
+
+/* Title in the drawer header */
+.drawer-title{
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Mobile rules */
+@media (max-width: 900px){
+  .layout{
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-desktop{
+    display: none; /* hide the whole outline + toc on mobile */
+  }
+
+  .mobile-sidebar-bar{
+    display: flex;
+    justify-content: flex-start;
+    margin: var(--s3) 0;
+  }
+
+  /* remove the right divider when sidebar is hidden */
+  .sidebar{
+    border-right: none;
+    padding-right: 0;
+  }
+}

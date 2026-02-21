@@ -12,37 +12,21 @@
   <body>
     {% include nav.html %}
 
-    <div class="container layout">
-  <aside class="sidebar" aria-label="Sidebar">
-    <div class="sidebar-block">
-      <div class="sidebar-title">Outline</div>
-
-      {% for group in site.data.outline %}
-        <div class="sidebar-section">{{ group.section }}</div>
-        <nav class="sidebar-nav" aria-label="{{ group.section }}">
-          {% for it in group.items %}
-            <a class="sidebar-link"
-               href="{{ it.url }}"
-               {% if page.url == it.url or page.permalink == it.url %}aria-current="page"{% endif %}>
-              {{ it.label }}
-            </a>
-          {% endfor %}
-        </nav>
-      {% endfor %}
-    </div>
-
-    <div class="sidebar-block toc-block">
-  <div class="toc-header">
-    <div class="sidebar-title">On this page</div>
-    <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="page-toc" data-toc-toggle>
-      Show
+<div class="container layout">
+  <!-- Mobile menu button (only visible on small screens via CSS) -->
+  <div class="mobile-sidebar-bar">
+    <button class="mobile-sidebar-button"
+            type="button"
+            data-sidebar-open
+            aria-controls="sidebar-drawer"
+            aria-expanded="false">
+      Menu
     </button>
   </div>
 
-  <nav id="page-toc" class="toc" aria-label="Table of contents">
-    <div class="muted">Loading…</div>
-  </nav>
-</div>
+  <!-- Desktop sidebar (hidden on mobile via CSS) -->
+  <aside class="sidebar sidebar-desktop" aria-label="Sidebar">
+    {% include sidebar.html %}
   </aside>
 
   <main class="content" id="main-content">
@@ -50,10 +34,25 @@
   </main>
 </div>
 
+<!-- Mobile sidebar drawer -->
+<div class="sidebar-overlay" data-sidebar-overlay hidden></div>
+
+<aside class="drawer drawer-left" id="sidebar-drawer" aria-hidden="true" aria-label="Site menu">
+  <div class="drawer-header">
+    <h2 class="drawer-title">Menu</h2>
+    <button type="button" class="drawer-close" data-sidebar-close aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="drawer-body">
+    {% include sidebar.html %}
+  </div>
+</aside>
+
     {% include about-drawer.html %}
     {% include footer.html %}
 
     <script src="/assets/drawer.js?v={{ site.time | date: '%s' }}"></script>
     <script src="/assets/toc.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="/assets/sidebar-drawer.js?v={{ site.time | date: '%s' }}"></script>
   </body>
 </html>

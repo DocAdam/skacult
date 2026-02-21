@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Contact · skaCULT</title>
     <meta name="description" content="Contact skaCULT / DocAdam." />
-    <link rel="stylesheet" href="/style.css?v=1771695718" />
+    <link rel="stylesheet" href="/style.css?v=1771696621" />
   </head>
 
   <body>
@@ -24,69 +24,83 @@
   </div>
 </nav>
 
-    <div class="container layout">
-  <aside class="sidebar" aria-label="Sidebar">
-    <div class="sidebar-block">
-      <div class="sidebar-title">Outline</div>
+<div class="container layout">
+  <!-- Mobile menu button (only visible on small screens via CSS) -->
+  <div class="mobile-sidebar-bar">
+    <button class="mobile-sidebar-button"
+            type="button"
+            data-sidebar-open
+            aria-controls="sidebar-drawer"
+            aria-expanded="false">
+      Menu
+    </button>
+  </div>
 
-      
-        <div class="sidebar-section">Core</div>
-        <nav class="sidebar-nav" aria-label="Core">
-          
-            <a class="sidebar-link"
-               href="/"
-               >
-              Annex
-            </a>
-          
-            <a class="sidebar-link"
-               href="/projects"
-               >
-              Projects
-            </a>
-          
-            <a class="sidebar-link"
-               href="/contact"
-               >
-              Contact
-            </a>
-          
-            <a class="sidebar-link"
-               href="/croissant"
-               >
-              Croissant
-            </a>
-          
-        </nav>
-      
-        <div class="sidebar-section">Folders</div>
-        <nav class="sidebar-nav" aria-label="Folders">
-          
-            <a class="sidebar-link"
-               href="/notes"
-               >
-              Notes (soon)
-            </a>
-          
-            <a class="sidebar-link"
-               href="/tools"
-               >
-              Tools (soon)
-            </a>
-          
-        </nav>
-      
-    </div>
+  <!-- Desktop sidebar (hidden on mobile via CSS) -->
+  <aside class="sidebar sidebar-desktop" aria-label="Sidebar">
+    <!-- _includes/sidebar.html -->
+<div class="sidebar-block">
+  <div class="sidebar-title">Outline</div>
 
-    <div class="sidebar-block toc-block">
+  
+    <div class="sidebar-section">Core</div>
+    <nav class="sidebar-nav" aria-label="Core">
+      
+        <a class="sidebar-link"
+           href="/"
+           >
+          Annex
+        </a>
+      
+        <a class="sidebar-link"
+           href="/projects"
+           >
+          Projects
+        </a>
+      
+        <a class="sidebar-link"
+           href="/contact"
+           >
+          Contact
+        </a>
+      
+        <a class="sidebar-link"
+           href="/croissant"
+           >
+          Croissant
+        </a>
+      
+    </nav>
+  
+    <div class="sidebar-section">Folders</div>
+    <nav class="sidebar-nav" aria-label="Folders">
+      
+        <a class="sidebar-link"
+           href="/notes"
+           >
+          Notes (soon)
+        </a>
+      
+        <a class="sidebar-link"
+           href="/tools"
+           >
+          Tools (soon)
+        </a>
+      
+    </nav>
+  
+</div>
+
+<div class="sidebar-block toc-block">
   <div class="toc-header">
     <div class="sidebar-title">On this page</div>
-    <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="page-toc" data-toc-toggle>
+    <button class="toc-toggle" type="button" aria-expanded="false" data-toc-toggle>
       Show
     </button>
   </div>
 
-  <nav id="page-toc" class="toc" aria-label="Table of contents">
+  <!-- NOTE: class not id (so we can reuse in a drawer safely) -->
+  <nav class="toc page-toc" aria-label="Table of contents">
     <div class="muted">Loading…</div>
   </nav>
 </div>
@@ -103,6 +117,85 @@
 <p class="muted">If you’re contacting me about a project, include the link and what you’re trying to do.</p>
   </main>
 </div>
+
+<!-- Mobile sidebar drawer -->
+<div class="sidebar-overlay" data-sidebar-overlay hidden></div>
+
+<aside class="drawer drawer-left" id="sidebar-drawer" aria-hidden="true" aria-label="Site menu">
+  <div class="drawer-header">
+    <h2 class="drawer-title">Menu</h2>
+    <button type="button" class="drawer-close" data-sidebar-close aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="drawer-body">
+    <!-- _includes/sidebar.html -->
+<div class="sidebar-block">
+  <div class="sidebar-title">Outline</div>
+
+  
+    <div class="sidebar-section">Core</div>
+    <nav class="sidebar-nav" aria-label="Core">
+      
+        <a class="sidebar-link"
+           href="/"
+           >
+          Annex
+        </a>
+      
+        <a class="sidebar-link"
+           href="/projects"
+           >
+          Projects
+        </a>
+      
+        <a class="sidebar-link"
+           href="/contact"
+           >
+          Contact
+        </a>
+      
+        <a class="sidebar-link"
+           href="/croissant"
+           >
+          Croissant
+        </a>
+      
+    </nav>
+  
+    <div class="sidebar-section">Folders</div>
+    <nav class="sidebar-nav" aria-label="Folders">
+      
+        <a class="sidebar-link"
+           href="/notes"
+           >
+          Notes (soon)
+        </a>
+      
+        <a class="sidebar-link"
+           href="/tools"
+           >
+          Tools (soon)
+        </a>
+      
+    </nav>
+  
+</div>
+
+<div class="sidebar-block toc-block">
+  <div class="toc-header">
+    <div class="sidebar-title">On this page</div>
+    <button class="toc-toggle" type="button" aria-expanded="false" data-toc-toggle>
+      Show
+    </button>
+  </div>
+
+  <!-- NOTE: class not id (so we can reuse in a drawer safely) -->
+  <nav class="toc page-toc" aria-label="Table of contents">
+    <div class="muted">Loading…</div>
+  </nav>
+</div>
+  </div>
+</aside>
 
     <!-- _includes/about-drawer.html -->
 <div class="drawer-overlay" data-drawer-overlay hidden></div>
@@ -144,7 +237,8 @@
   </div>
 </footer>
 
-    <script src="/assets/drawer.js?v=1771695718"></script>
-    <script src="/assets/toc.js?v=1771695718"></script>
+    <script src="/assets/drawer.js?v=1771696621"></script>
+    <script src="/assets/toc.js?v=1771696621"></script>
+    <script src="/assets/sidebar-drawer.js?v=1771696621"></script>
   </body>
 </html>
