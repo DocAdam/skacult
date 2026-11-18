@@ -1,6 +1,6 @@
 # Ska Cult homepage
 
-The homepage is a static export of the Ska Cult design created in ChatGPT Sites. It works within this existing Jekyll repository without a separate build or any JavaScript dependencies. The original Jekyll layouts, data, pages, root stylesheet, and CNAME remain in place.
+The Ska Cult homepage works within this existing Jekyll repository without a separate build or any JavaScript dependencies. The original Jekyll layouts, data, pages, root stylesheet, and CNAME remain in place.
 
 ## Files to edit
 
@@ -39,4 +39,4 @@ The root `index.html` replaces the previous homepage when this branch is merged 
 
 The original homepage remains in Git history. No tracked `_site` output is updated here; let the site's deployment build generate its output.
 
-Use this repository as the source of truth after adoption. ChatGPT Sites has a separate copy; future changes there are not automatically synced to GitHub. No Sites-specific hosting manifest or credentials are included in this export.
+Use this repository as the source of truth for homepage content and assets.
