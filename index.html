@@ -1,56 +1,54 @@
----
-layout: default
-title: Annex
-nav: annex
-description: "SKA — Sacred Knowledge Annex. Doctrine-free. Idea-rich."
----
-
-<section class="hero">
-  <h1>SKA — Sacred Knowledge Annex</h1>
-  <p class="lede">Doctrine-free. Idea-rich.</p>
-
-  <div class="hero-actions">
-    <a class="button" href="/projects">Browse projects</a>
-    <button class="button button-outline" type="button" data-drawer-open="about">About</button>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Featured</h2>
-
-  <div class="card-grid">
-    {% assign featured = site.data.projects | where: "featured", true %}
-    {% for p in featured %}
-      <article class="card">
-        <h3 class="card-title">{{ p.title }}</h3>
-        <p class="card-desc">{{ p.description }}</p>
-
-        <div class="card-meta">
-          {% if p.status %}<span class="badge">{{ p.status }}</span>{% endif %}
-          {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
-        </div>
-
-        <div class="card-links">
-          {% if p.url %}<a href="{{ p.url }}">Open</a>{% endif %}
-          {% if p.repo %}<a href="{{ p.repo }}">Repo</a>{% endif %}
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="section">
-  <h2>Cool stuff</h2>
-
-  {% for group in site.data.cool_stuff %}
-    <h3 class="h3-tight">{{ group.group }}</h3>
-    <ul class="link-list">
-      {% for item in group.items %}
-        <li>
-          <a href="{{ item.url }}">{{ item.name }}</a>
-          {% if item.note %}<span class="muted"> — {{ item.note }}</span>{% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-</section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f14c2b">
+  <meta name="description" content="Ska Cult: the Church of Making Things. Useful projects, independent experiments, and a healthy devotion to the offbeat. By Adam Pugh.">
+  <title>Ska Cult — The Church of Making Things</title>
+  <link rel="icon" href="assets/skacult/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/skacult/site.css">
+  <script src="assets/skacult/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Ska Cult home"><span class="brand-icon" aria-hidden="true">✳︎</span> SKA CULT<span class="brand-dot">®? </span></a>
+    <nav aria-label="Main navigation"><a href="#projects">The works</a><a href="#creed">The creed</a><a href="https://adamthepugh.com/">Meet the maker <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="small-star" aria-hidden="true">✳︎</span> An independent congregation of ideas</p>
+        <h1 id="hero-title">LESS DOGMA.<br>MORE <span class="offbeat">OFFBEAT.</span></h1>
+        <p class="hero-description">A home for useful tools, curious projects, and the occasional questionable idea. Built by Adam Pugh. Blessed by absolutely no one.</p>
+        <a class="button" href="#projects">Explore the works <span aria-hidden="true">↓</span></a>
+        <p class="hero-footnote">No membership. No meetings. Bring your own horns.</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="A vinyl record rising inside a checkerboard church window, with a Pick it up sticker">
+        <div class="art-top"><span>THE CHURCH OF<br>MAKING THINGS</span><span>33⅓ RPM<br>∞ POSSIBILITIES</span></div>
+        <div class="arch"><div class="arch-checks"></div><div class="sun-lines"></div><div class="record"><div class="record-label"><span>SKA CULT</span><b>SC</b><span>SIDE A · KEEP MAKING</span></div></div><div class="window-base"></div></div>
+        <div class="sticker"><span>PICK<br>IT UP!</span><small>AND MAKE SOMETHING.</small></div>
+        <div class="art-bottom"><span>EST. WHENEVER</span><span>ALL ARE WELCOME ↗</span></div>
+      </div>
+    </section>
+    <div class="checker" aria-hidden="true"></div>
+    <div class="ticker" aria-label="Useful things. Odd ideas. Good intentions. Offbeat forever."><span>USEFUL THINGS <b>✳︎</b> ODD IDEAS <b>✳︎</b> GOOD INTENTIONS <b>✳︎</b> OFFBEAT FOREVER <b>✳︎</b></span></div>
+    <section class="projects section-wrap" id="projects" aria-labelledby="works-title">
+      <div class="section-label"><span>01 / THE WORKS</span><span>INDEPENDENTLY MADE. OPEN TO EXPLORE.</span></div>
+      <div class="section-heading"><h2 id="works-title">FRUITS OF<br>THE <span class="outline">OFFBEAT.</span></h2><p>A few things made with care, curiosity,<br>and a tendency to overthink the details.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects"><button aria-pressed="true" data-filter="all">Everything <span>04</span></button><button aria-pressed="false" data-filter="tools">Tools & systems</button><button aria-pressed="false" data-filter="words">Words</button><button aria-pressed="false" data-filter="experiments">Experiments</button></div>
+      <p class="sr-only" id="filter-status" role="status">Showing all 4 projects.</p>
+      <div class="project-grid">
+        <article class="project featured" data-category="tools"><div class="project-visual jobs-art" aria-hidden="true"><div class="paper-slip"><span>GOOD DOC JOBS</span><div class="slip-rule"></div><b>GOOD WORK.<br>LESS DIGGING.</b><div class="slip-lines"><i></i><i></i><i></i></div><span>TECHNICAL WRITING + DOCUMENTATION</span></div><span class="round-stamp">FREE TO<br>EXPLORE ↗</span></div><div class="project-content"><p class="project-meta">01 / TOOLS & SYSTEMS <span>PUBLIC RESOURCE</span></p><h3><a href="https://docs.google.com/spreadsheets/d/1rECWXCGhDKUiB3-LIwEEe1teaPWaGxgSK28AZADFF4g/edit?usp=sharing">Good Doc Jobs <span aria-hidden="true">↗</span></a></h3><p>A free database of technical writing and documentation jobs. A little more signal in the job-search noise.</p><a class="text-link" href="https://docs.google.com/spreadsheets/d/1rECWXCGhDKUiB3-LIwEEe1teaPWaGxgSK28AZADFF4g/edit?usp=sharing">Browse the jobs <span aria-hidden="true">↗</span></a></div></article>
+        <article class="project" data-category="words"><div class="project-visual notes-art" aria-hidden="true"><div class="notes-title">WORKING<br><span>NOTES.</span></div><span class="notes-pencil">✎</span><div class="notes-caption">IDEAS IN PROGRESS. WORDS ON PURPOSE.</div></div><div class="project-content"><p class="project-meta">02 / WORDS <span>ON SUBSTACK</span></p><h3><a href="https://docadam.substack.com/">Working Notes <span aria-hidden="true">↗</span></a></h3><p>Writing about documentation systems, editorial work, job research, and the things learned along the way.</p><a class="text-link" href="https://docadam.substack.com/">Read the notes <span aria-hidden="true">↗</span></a></div></article>
+        <article class="project compact" data-category="tools"><div class="project-content"><p class="project-meta">03 / TOOLS & SYSTEMS <span>OPEN SOURCE</span></p><h3><a href="https://github.com/DocAdam/docs-operating-system">Documentation<br>Operating System <span aria-hidden="true">↗</span></a></h3><p>A reusable approach to turning scattered product knowledge into reviewed, useful documentation.</p><a class="text-link" href="https://github.com/DocAdam/docs-operating-system">Explore the source <span aria-hidden="true">↗</span></a></div></article>
+        <article class="project compact" data-category="experiments"><div class="project-content"><p class="project-meta">04 / EXPERIMENTS <span>WORKING PROTOTYPE</span></p><h3><a href="https://docadam.github.io/docs-operating-system/euler/">Euler MCP<br>Documentation <span aria-hidden="true">↗</span></a></h3><p>A self-initiated exploration of clearer, task-focused MCP docs. Built from public materials; not official Euler documentation.</p><a class="text-link" href="https://docadam.github.io/docs-operating-system/euler/">Try the prototype <span aria-hidden="true">↗</span></a></div></article>
+      </div>
+      <a class="github-link" href="https://github.com/DocAdam">More from the workshop on GitHub <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="creed" id="creed" aria-labelledby="creed-title"><div class="section-wrap"><div class="section-label"><span>02 / THE CREED</span><span>VERY LOOSELY HELD BELIEFS</span></div><div class="creed-layout"><div><p class="eyebrow">A church? Sort of. A cult? Absolutely not.</p><h2 id="creed-title">FAITH IN<br>MAKING<br><span>THINGS.</span></h2></div><div class="creed-copy"><p class="creed-intro">This started as a joke about a church for ska enthusiasts. The name stuck. The scope got a little out of hand.</p><p>Now it’s a home for independent projects: some useful, some experimental, all made by a person who likes figuring things out. Ska is the house spirit. Curiosity does the heavy lifting.</p><ol><li><span>01</span> Make something useful.</li><li><span>02</span> Leave room for the weird.</li><li><span>03</span> Share what you figure out.</li><li><span>04</span> Pick it up. Try again.</li></ol><a class="text-link" href="https://adamthepugh.com/">The person behind the curtain <span aria-hidden="true">↗</span></a></div></div></div></section>
+    <section class="sermon section-wrap" aria-labelledby="sermon-title"><div><p class="eyebrow" id="sermon-title">A VERY SHORT SERMON</p><p class="sermon-text" id="sermon-text" aria-live="polite">“An idea doesn’t have to become a whole thing. A small useful thing will do.”</p></div><button class="sermon-button" id="sermon-button">Another small revelation <span aria-hidden="true">↻</span></button></section>
+  </main>
+  <footer><div class="footer-top"><a class="brand" href="#">✳︎ SKA CULT</a><p>Independent projects.<br>Questionable theology. Excellent intentions.</p><a href="https://adamthepugh.com/">Made by Adam Pugh <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> SKA CULT</span><span>NO COLLECTION PLATE. JUST A FEW LINKS.</span><a href="#">BACK TO THE TOP ↑</a></div><div class="checker" aria-hidden="true"></div></footer>
+</body>
+</html>
